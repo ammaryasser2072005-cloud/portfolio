@@ -32,12 +32,22 @@
 
         header {
             text-align: center;
-            padding: 50px 0 30px;
+            padding: 40px 0;
             border-bottom: 1px solid var(--border-color);
         }
 
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            margin-bottom: 15px;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.2);
+        }
+
         h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--accent-color);
             margin-bottom: 10px;
         }
@@ -45,7 +55,6 @@
         .subtitle {
             color: var(--text-secondary);
             font-size: 1.2rem;
-            letter-spacing: 0.5px;
         }
 
         section {
@@ -61,7 +70,7 @@
             padding-bottom: 5px;
         }
 
-        .grid {
+        .skills-grid, .projects-grid, .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
@@ -69,42 +78,34 @@
 
         .card {
             background-color: var(--card-bg);
-            padding: 25px;
-            border-radius: 10px;
+            padding: 20px;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .card h3 {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: #f1f5f9;
-            font-size: 1.25rem;
         }
 
-        .card p, .card ul {
+        .card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
 
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-
         .contact-info p {
             margin-bottom: 10px;
-            font-size: 1.05rem;
         }
 
         .contact-info a {
             color: var(--accent-color);
             text-decoration: none;
-            font-weight: 500;
+            word-break: break-all;
         }
 
         .contact-info a:hover {
@@ -113,31 +114,31 @@
 
         footer {
             text-align: center;
-            padding: 30px 0;
+            padding: 20px;
             color: var(--text-secondary);
             font-size: 0.9rem;
             border-top: 1px solid var(--border-color);
-            margin-top: 50px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
     <header>
+        <!-- ضع اسم ملف صورتك الشخصية المرفوعة على جيت هاب مكان profile.jpg -->
+        <img src="profile.jpg" alt="Ammar Profile Picture" class="profile-img">
         <h1>Ammar</h1>
-        <p class="subtitle">AI Developer | Data Analyst | QA Engineer</p>
+        <p class="subtitle">AI Developer | Data Analyst | Software QA Engineer</p>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <div class="card">
-            <p>I am a Computer Science & Artificial Intelligence student passionate about building intelligent systems, analyzing data to drive decisions, and ensuring software reliability through meticulous testing. With hands-on experience in machine learning pipelines, data annotation, and QA methodology, I bridge the gap between intelligent code and high-quality user experiences.</p>
-        </div>
+        <p>I am a Computer Science & Artificial Intelligence student passionate about building intelligent systems, analyzing data to drive decisions, and ensuring software reliability through meticulous testing. With hands-on experience in machine learning pipelines, data annotation, and QA methodology, I bridge the gap between intelligent code and high-quality user experiences.</p>
     </section>
 
     <section id="skills">
         <h2>Technical Skills</h2>
-        <div class="grid">
+        <div class="skills-grid">
             <div class="card">
                 <h3>Programming Languages</h3>
                 <p>Python, SQL, C++</p>
@@ -159,7 +160,7 @@
 
     <section id="services">
         <h2>Services Offered</h2>
-        <div class="grid">
+        <div class="services-grid">
             <div class="card">
                 <h3>Data Analysis & Visualization</h3>
                 <p>Cleaning raw datasets, conducting Exploratory Data Analysis (EDA), and generating actionable visual insights.</p>
@@ -177,7 +178,7 @@
 
     <section id="projects">
         <h2>Featured Projects</h2>
-        <div class="grid">
+        <div class="projects-grid">
             <div class="card">
                 <h3>Okaz (عُكاز) – AI Document Simplifier</h3>
                 <p>An intelligent tool to translate and simplify complex legal/medical documents into accessible Arabic using Gemini API and Text-to-Speech.</p>
@@ -197,9 +198,9 @@
         <h2>Contact Information</h2>
         <div class="card contact-info">
             <p><strong>Location:</strong> 10th of Ramadan City, Egypt</p>
-            <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn Profile</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com" target="_blank" rel="noopener">GitHub Profile</a></p>
+            <p><strong>Email:</strong> <a href="mailto:ammaryasser2072005@gmail.com">ammaryasser2072005@gmail.com</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/ammaryasser2072005-cloud" target="_blank">https://github.com/ammaryasser2072005-cloud</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ammar-yasser" target="_blank">LinkedIn Profile</a></p>
         </div>
     </section>
 
